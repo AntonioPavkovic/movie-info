@@ -1,145 +1,241 @@
-.login__root{
-    background: url(https://assets.nflxext.com/ffe/siteui/vlv3/538717c0-f271-40e9-a99e-b07f9c521322/881b6b9a-eef3-4c67-8757-f5aa72f40fc7/GR-en-20210201-popsignuptwoweeks-perspective_alpha_website_small.jpg);
-    background-size: cover;
-    height: 200vh;
-    width: 100vw;
+.login__root {
+  background: url(https://assets.nflxext.com/ffe/siteui/vlv3/538717c0-f271-40e9-a99e-b07f9c521322/881b6b9a-eef3-4c67-8757-f5aa72f40fc7/GR-en-20210201-popsignuptwoweeks-perspective_alpha_website_small.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 .login__banner {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 4vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4vw;
 }
 
 .login__fade__top {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, .4);
-    background-image: linear-gradient(
-        to top,
-        rgba(0, 0, 0, .8) 0,
-        rgba(0, 0, 0, 0) 60%,
-        rgba(0, 0, 0, .8) 100%
-    );
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, .4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, .8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, .8) 100%
+  );
 }
 
 .login__logo {
-    z-index: 2;
-    width: 10vw;
-    object-fit: contain;
-    margin: 2vw 0;
+  z-index: 2;
+  width: 3vw;
+  object-fit: contain;
+  margin: 2vw 0;
 }
 
 .login__button {
-    color: #fff;
-    z-index: 2;
-    background-color: #e50914;
-    cursor: pointer;
-    padding: 7px 17px;
-    line-height: normal;
-    margin: 2vw 0;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 6%;
-    font-family: sans-serif;
-    float: right;
-  }
+  color: #fff;
+  z-index: 2;
+  background-color: #e50914;
+  cursor: pointer;
+  padding: 7px 17px;
+  line-height: normal;
+  margin: 2vw 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6%;
+  font-family: sans-serif;
+  float: right;
+}
+
+.login__button:focus {
+  outline: none;
+}
+
+.login__body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 20vh;
+  max-width: 48rem;
+}
+
+.login__body__row {
+  display: flex;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login__body__col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.login__body__header {
+  z-index: 3;
+  color: white;
+  margin: 0 auto;
+  max-width: 40rem;
+  font-size: 3.125rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login__body__row2 {
+  color: white;
+  margin: 0 auto;
+  z-index: 3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row3 {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.login__body__email {
+  z-index: 3;
+  margin: 0 auto;
+  height: 3.75rem;
+  flex: stretch;
+  width: 100%;
+  flex-wrap: column;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.login__body__email[type='email'] {
+  padding-left: .5rem;
+  color: black;
+  font-weight: bold;
+}
+
+.login__body__email::placeholder {
+  color: gray;
+}
+
+.login__body__button {
+  z-index: 3;
+  color: white;
+  background-color: #e50914;
+  flex: stretch;
+  width: 70%;
+  font-size: 1.5rem;
+  flex-wrap: column;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: none;
+}
+
+.login__body__alert {
+  color: orange;
+  z-index: 1;
+  margin-top: .5rem;
+  display: none;
+}
+
+.show__alert {
+  display: block;
+}
+
+.alert__row {
+  display: flex;
+}
+.ReactCrop div{
+  max-height: inherit;
+}
+.ReactCrop__image{
+  max-width: 100%;
+  max-height: inherit;
+  width: var(--minimized-width, auto);
+  height: var(--minimized-height, auto);
+}
+
+.githubContainer{
+  display: inline-flex;
+  background-color: #ccc;
+  min-width: fit-content;
+  width: 180px;
+  padding: 5px;
+  border: 5px solid #555;
+  border-radius: 15px;
+  opacity: 0.8;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+.githubContainer:hover{
+  opacity: 1;
+}
+.github,.githubLogo{
+  height: 35px;
+  width: auto;
+}
+/*Varijable*/
+:root{
+	--minimized-width: none;
+	--minimized-height: none;
+}
+
+.tehimg{
+	margin:auto; 
+	display:block;
+	height: 80px;
+}
+
+.teh{
+	border: 2px solid rgba(210,210,230, 0.2);
+	border-radius: 8px;
+	min-width: 120px;
+	text-align: center;
+	padding-bottom: 20px;
   
-  .login__button:focus {
-    outline: none;
-  }
-  
-  .login__body {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    margin-top: 20vh;
-    max-width: 48rem;
-  }
-  
-  .login__body__row {
-    display: flex;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .login__body__col {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-  }
-  
-  .login__body__header {
-    z-index: 3;
-    color: white;
-    margin: 0 auto;
-    max-width: 40rem;
-    font-size: 3.125rem;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .login__body__row2 {
-    color: white;
-    margin: 0 auto;
-    z-index: 3;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .row3 {
-    margin-top: 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 400;
-  }
-  
-  .login__body__email {
-    z-index: 3;
-    margin: 0 auto;
-    height: 3.75rem;
-    flex: stretch;
-    width: 100%;
-    flex-wrap: column;
-    box-sizing: border-box;
-    border-radius: 5px;
-  }
-  
-  .login__body__email[type='email'] {
-    padding-left: .5rem;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .login__body__email::placeholder {
-    color: gray;
-  }
-  
-  .login__body__button {
-    z-index: 3;
-    color: white;
-    background-color: #e50914;
-    flex: stretch;
-    width: 70%;
-    font-size: 1.5rem;
-    flex-wrap: column;
-    cursor: pointer;
-    box-sizing: border-box;
-    border: none;
-  }
-  
-  .login__body__alert {
-    color: orange;
-    z-index: 1;
-    margin-top: .5rem;
-    display: none;
-  }
-  
-  .show__alert {
-    display: block;
-  }
-  
-  .alert__row {
-    display: flex;
-  }
+}
+.html{box-shadow: 0px 0px 10px red inset;}
+.css3{box-shadow: 0px 0px 10px #4444FF inset;}
+.javascript{box-shadow: 0px 0px 10px yellow inset;}
+.sql{box-shadow: 0px 0px 10px white inset;}
+.node{box-shadow: 0px 0px 10px #00FF00 inset;}
+.atom{box-shadow: 0px 0px 8px white inset, 0px 0px 15px green inset, 0px 0px 15px green inset;}
+.boot{box-shadow: 0px 0px 10px #BA55D3 inset;}
+.react{box-shadow: 0px 0px 10px cyan inset;}
+.mysql{box-shadow: 0px 0px 6px white inset, 0px 0px 18px orange inset;}
+.exp{box-shadow: 0px 0px 6px white inset, 0px 0px 14px yellow inset;}
+.logo{
+	height: 5rem;
+}
+.tehimg{
+	margin:auto; 
+	display:block;
+	height: 80px;
+}
+
+/*
+#html {
+	text-shadow: 0px 0px 20px #FF4444, 0px 0px 20px #FF4444, 0px 0px 20px #FF4444;
+}
+
+#html:hover{
+	text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 20px white, 0px 0px 10px white;
+}
+#css3{
+	text-shadow: 0px 0px 25px #2222FF, 0px 0px 25px #AAAAFF, 0px 0px 25px#AAAAFF, 0px 0px 25px#AAAAFF, 0px 0px 25px#AAAAFF;
+}
+#css3:hover{
+	text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 20px white, 0px 0px 10px white;
+}
+#javascript{
+	text-shadow: 0px 0px 20px yellow, 0px 0px 20px yellow, 0px 0px 20px yellow;
+}
+#javascript:hover{
+	text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 20px white, 0px 0px 10px white;
+}
+#react{
+	text-shadow: 0px 0px 20px cyan, 0px 0px 20px cyan, 0px 0px 20px cyan;
+}
+#react:hover{
+	text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 20px white, 0px 0px 10px white;
+}*/

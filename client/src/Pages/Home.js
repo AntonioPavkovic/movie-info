@@ -1,78 +1,61 @@
-import React, { useState } from "react";
-import "./Home.css";
-import SignUp from "./SignUp.js";
-import SignIn from "./SignIn.js";
+import html5 from './../images/HTML5_logo.png';
+import css3 from './../images/CSS3_logo.png';
+import javascript from './../images/javascript_logo.png';
+import react from './../images/React_logo.png';
+import netflix from './../images/NetFlix_logo.png'
+import React from 'react'
+import './Home.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Home() {
 
-    const[showAlert, setShowAlert] = useState(false);
-    const [signUp, setSignUp] = useState(false);
-    const [signIn, setSignIn] = useState(false);
-
-    function handleRedirect() {
-        const mail = document.getElementById('email');
-        if (mail.value === '') {
-          setShowAlert(true);
-          document.getElementById('alert').innerHTML = 'Email je potrebam!';
-          mail.style.borderBottom = '2px solid orange';
-        } else {
-          var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-          if (!pattern.test(mail.value)) {
-            document.getElementById('alert').innerHTML = 'Netocan mail!';
-            mail.style.borderBottom = '2px solid orange';
-            setShowAlert(true);
-          } else {
-            setShowAlert(false);
-            mail.style.borderBottom = 'none';
-            setSignUp(true);
-          }
-        }
-    }
-
-    return (
-        <div className = "login__root">
-            <div className = "login__banner">
-                <img
-                onClick = {() => window.location.reload()}
-                className = "login__logo"
-                src = "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-                alt = "Netflix Logo"
-                />
-                <button onClick = {() => setSignIn(true)} className="login_button"><h3>Prijavite se</h3></button>
-            </div>
-
-            <div className = "login__fade__top"></div>
-
-            <div className="login__body">
-        {signUp ? (<SignUp mail={document.getElementById('email').value} />) :
-        signIn ? (<SignIn />) :
-        ( <>
-            <div className="login__body__row">
-              <h1 className="login__body__header"> Unlimited Movies, TV shows, and more. </h1>
-            </div>
-            <div className="login__body__row">
-              <h2 className="login__body__row2"> Watch anywhere. Cancel anytime. </h2>
-            </div>
-            <div className="login__body__row">
-              <h3 className="login__body__row2 row3"> Ready to watch? Enter your email to create or restart your membership. </h3>
-            </div>
-            <div className="login__body__col">
-              <div className="alert__row">
-                <input id="email" className="login__body__email" type="email" placeholder="Email address" required />
-                <button type="submit" onClick={handleRedirect} className="login__body__button"> TRY 30 DAYS FREE {`>`} </button>
-              </div>
-              <div className="alert__row">
-                <div id="alert" className={`login__body__alert ${showAlert && "show__alert"}`} />
-              </div>
-            </div>
-            <div className="login__body__row">
-              <h3 className="login__body__row2 row3"> Only new members are eligible for this offer. </h3>
-            </div>  
-          </>
-        )}
+  return (
+    <div className="login__root">
+      <div className="login__banner">
+        <img
+        onClick={() => window.location.reload()}
+        className="login__logo"
+        src={netflix}
+        alt="Netflix Logo"
+        />
+        <button className="login__button"> <h3>Prijavite se!</h3> </button>
       </div>
+      <div className="login__fade__top"></div>
+      <div className="login__body">
+            <div className="login__body__row">
+              <h1 className="login__body__header"> Projekt Movie-Info </h1>
+            </div>
+            <div className="login__body__row">
+              <h2 className="login__body__row2"> Antonio Pavković & Nikola Alerić </h2>
+            </div>
+            <div className="login__body__row">
+              <h3 className="login__body__row2"> Ovaj projekt namjenjen je da sadrzi ukratko podatke i trailere o nekim svjetskim filmovima i TV emisijama na jednom mjestu. </h3>
+            </div>
+            <div className="login__body__row">
+              <h3 className="login__body__row2"> Tehnologije koje koristimo: </h3>
+            </div>
+            <div className = "login__body__row" >
 
-        </div>
+              <div className="col-teh">
+                <a href="https://www.w3schools.com/html/" id="html"><img alt="" src={html5} className="tehimg" /></a>
+              </div>
+              
+              <div className="col-teh">
+                <a href="https://www.w3schools.com/css/"  id="css3"><img alt="" src={css3} className="tehimg" /></a>
+              </div>
+
+              <div className="col-teh">
+                <a href="https://www.w3schools.com/js/" id="javascript"><img alt="" src={javascript} className="tehimg" /></a>
+              </div>
+
+              <div className="col-teh">
+                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={react} className="tehimg" /></a>
+              </div>
+
+            </div>
+      </div>
+    </div>
   )
 }
+
 export default Home
