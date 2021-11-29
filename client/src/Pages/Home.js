@@ -2,8 +2,13 @@ import html5 from './../images/HTML5_logo.png';
 import css3 from './../images/CSS3_logo.png';
 import javascript from './../images/javascript_logo.png';
 import react from './../images/React_logo.png';
-import netflix from './../images/NetFlix_logo.png'
-import React from 'react'
+import netflix from './../images/NetFlix_logo.png';
+import sql from './../images/sql_logo.png';
+import mysql from './../images/mysql_logo.png';
+import node from './../images/node_logo.png';
+import express from './../images/ExpressJS_logo.png'
+import github from './../images/GitHubLogo.png'
+import React from 'react';
 import './Home.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -52,7 +57,31 @@ function Home() {
                 <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={react} className="tehimg" /></a>
               </div>
 
-            </div>
+              <div className = "col-teh">
+                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={sql} className="tehimg" /></a>
+              </div>
+
+
+              <div className = "col-teh">
+                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={mysql} className="tehimg" /></a>
+              </div>
+
+
+              <div className = "col-teh">
+                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={node} className="tehimg" /></a>
+              </div>
+
+              <div className = "col-teh">
+                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={express} className="tehimg" /></a>
+              </div>
+          </div>
+        <div className = "blog-post">
+          <a href="https://github.com/AntonioPavkovic/movie-info" target="_blank" rel="noreferrer">
+            <span className="githubContainer">
+              <img alt='' src={github} className="github" />
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   )
