@@ -1,7 +1,7 @@
 .login__root {
   background: url(https://assets.nflxext.com/ffe/siteui/vlv3/538717c0-f271-40e9-a99e-b07f9c521322/881b6b9a-eef3-4c67-8757-f5aa72f40fc7/GR-en-20210201-popsignuptwoweeks-perspective_alpha_website_small.jpg) center no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 125vh;
   width: 100vw;
 }
 
@@ -211,4 +211,21 @@
 	margin:auto; 
 	display:block;
 	height: 80px;
+}
+
+.ante {
+  color: white;
+  background-color: #e50914;
+}
+
+.niksa {
+  color: white;
+  background-color: #e50914;
+}
+
+.blog-post {
+  color: white;
+  margin: 0 auto;
+  z-index: 3;
+  font-family: Arial, Helvetica, sans-serif; 
 }

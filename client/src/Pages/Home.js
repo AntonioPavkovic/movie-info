@@ -12,6 +12,7 @@ import React from 'react';
 import './Home.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 function Home() {
 
   return (
@@ -33,9 +34,28 @@ function Home() {
             <div className="login__body__row">
               <h2 className="login__body__row2"> Antonio Pavković & Nikola Alerić </h2>
             </div>
+
             <div className="login__body__row">
               <h3 className="login__body__row2"> Ovaj projekt namjenjen je da sadrzi ukratko podatke i trailere o nekim svjetskim filmovima i TV emisijama na jednom mjestu. </h3>
             </div>
+
+            <div className="blog-post">
+                <h2 className="blog-post-title">Autori</h2>
+                <p className="blog-post-meta">Antonio Pavković & Nikola Alerić</p>
+                <hr className="round" />
+                <div className="row">
+
+                <div className="col-6" id="ante">
+                  <h4 className="w">Antonio Pavković</h4>
+                  <p>Student 3. godine Fakulteta Strojarstva, Računarstva i Elektrotehnike u Mostaru. <br /><br />Rođen 30.05.1999.</p>
+                </div>
+                <div className="col-6" id="niksa">
+                    <h4 className="w">Nikola Alerić</h4>
+                  <p>Student 3. godine Fakulteta Strojarstva, Računarstva i Elektrotehnike u Mostaru. <br /><br />Rođen 16.09.2000.</p>
+                </div>
+              </div>
+            </div>
+
             <div className="login__body__row">
               <h3 className="login__body__row2"> Tehnologije koje koristimo: </h3>
             </div>
@@ -58,25 +78,26 @@ function Home() {
               </div>
 
               <div className = "col-teh">
-                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={sql} className="tehimg" /></a>
+                <a href="https://www.w3schools.com/sql/" id="sql"><img alt="" src={sql} className="tehimg" /></a>
               </div>
 
 
               <div className = "col-teh">
-                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={mysql} className="tehimg" /></a>
+                <a href="https://www.mysql.com/" id="mysql"><img alt="" src={mysql} className="tehimg" /></a>
               </div>
 
 
               <div className = "col-teh">
-                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={node} className="tehimg" /></a>
+                <a href="https://www.w3schools.com/node/" id="react"><img alt="" src={node} className="tehimg" /></a>
               </div>
 
               <div className = "col-teh">
-                <a href="https://www.w3schools.com/react/" id="react"><img alt="" src={express} className="tehimg" /></a>
+                <a href="https://expressjs.com/" id="react"><img alt="" src={express} className="tehimg" /></a>
               </div>
           </div>
         <div className = "blog-post">
-          <a href="https://github.com/AntonioPavkovic/movie-info" target="_blank" rel="noreferrer">
+          <a href = "https://docs.google.com/document/d/14FJwW5mtFDIoLcWDPPttZoWnju4dFFrm5GFhFeXkWqE/edit?usp=sharing">Link vizije</a>
+          <a href="https://github.com/AntonioPavkovic/movie-info" target = "_blank" rel="noreferrer">
             <span className="githubContainer">
               <img alt='' src={github} className="github" />
             </span>
