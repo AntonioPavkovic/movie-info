@@ -21,7 +21,7 @@
   "devDependencies": {},
   "homepage": "https://studenti.sum.ba/projekti/rwa/2022/g14/",
   "author": "",
-
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
