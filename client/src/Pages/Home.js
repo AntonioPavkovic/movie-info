@@ -8,12 +8,19 @@ import mysql from './../images/mysql_logo.png';
 import node from './../images/node_logo.png';
 import express from './../images/ExpressJS_logo.png'
 import github from './../images/GitHubLogo.png'
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "../Pages/SignIn";
+import { Link } from 'react-router-dom';
+import { Router } from 'react-router';
+import { Switch   } from 'react-router-dom';
+import SignIn from '../Pages/SignIn';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+
+  const [signIn, setSignIn] = useState(false);
 
   return (
     <div className="login__root">
@@ -24,10 +31,13 @@ function Home() {
         src={netflix}
         alt="Netflix Logo"
         />
-        <button className="login__button"> <h3>Prijavite se!</h3> </button>
+        <button className="login__button" onClick = {() => setSignIn(true)}> <h3>Prijavite se!</h3> </button>
+          
       </div>
       <div className="login__fade__top"></div>
       <div className="login__body">
+        {signIn ? (<SignIn />):
+        (<>
             <div className="login__body__row">
               <h1 className="login__body__header"> Projekt Movie-Info </h1>
             </div>
@@ -88,11 +98,11 @@ function Home() {
 
 
               <div className = "col-teh">
-                <a href="https://www.w3schools.com/node/" id="react"><img alt="" src={node} className="tehimg" /></a>
+                <a href="https://www.w3schools.com/node/" id="node"><img alt="" src={node} className="tehimg" /></a>
               </div>
 
               <div className = "col-teh">
-                <a href="https://expressjs.com/" id="react"><img alt="" src={express} className="tehimg" /></a>
+                <a href="https://expressjs.com/" id="express"><img alt="" src={express} className="tehimg" /></a>
               </div>
           </div>
         <div className = "blog-post">
@@ -103,6 +113,9 @@ function Home() {
             </span>
           </a>
         </div>
+
+        </>
+        )}
       </div>
     </div>
   )
