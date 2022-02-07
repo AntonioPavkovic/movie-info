@@ -1,8 +1,8 @@
 import React from "react";
-import Row from "../Components/Row/Row";
+import Row from "../components/Row/Row";
 import requests from "../requests/requests";
-import Banner from "../Components/Banner/Banner";
-import Nav from "../Components/Nav/Nav";
+import Banner from "../components/Banner/Banner";
+import Nav from "../components/Nav/Nav";
 import "./Browse.css"
 
 function Browse() {

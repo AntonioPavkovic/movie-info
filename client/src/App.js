@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 function App() {
 
   return (
-    <Home />
+    <Browse />
   );
 }
 
