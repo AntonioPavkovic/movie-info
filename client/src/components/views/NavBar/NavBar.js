@@ -4,6 +4,8 @@ import RightMenu from "./Sections/RightMenu";
 import { Drawer, Button, Icon } from "antd";
 import "./Sections/Navbar.css";
 
+const Logo = require('../../../assets/images/Logo.png');
+
 function NavBar() {
   const [visible, setVisible] = useState(false);
 
@@ -21,7 +23,7 @@ function NavBar() {
       style={{ position: "fixed", zIndex: 5, width: "100%" }}
     >
       <div className="menu__logo">
-        <a href="/">MooV</a>
+        <a href="/"><img src={Logo} alt="Logo" style={{ width: '100%', marginTop: '-5px' }} /></a>
       </div>
       <div className="menu__container">
         <div className="menu_left">
