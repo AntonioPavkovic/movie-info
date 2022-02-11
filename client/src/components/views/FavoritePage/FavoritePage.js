@@ -14,7 +14,7 @@ function FavoritePage() {
     fetchFavoritedMovie();
   }, []);
 
-  
+  // Fetch F
   const fetchFavoritedMovie = () => {
     Axios.post("/api/favorite/getFavoritedMovie", variable).then((response) => {
       if (response.data.success) {

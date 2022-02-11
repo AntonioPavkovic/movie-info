@@ -25,7 +25,7 @@ function LandingPage() {
   const [MainMovieImage, setMainMovieImage] = useState(null);
   const [CurrentPage, setCurrentPage] = useState(0);
   const endpoint = `${API_URL}movie/${view}?api_key=${API_KEY}&language=en-US&page=1`;
-  
+  // Main Page's image
   useEffect(() => {
     fetchMovies(endpoint);
   }, []);
@@ -34,12 +34,14 @@ function LandingPage() {
     fetch(endpoint)
       .then((result) => result.json())
       .then((result) => {
+        // Just add state
         setMovies([...Movies, ...result.results]);
         setMainMovieImage(result.results[0]);
         setCurrentPage(result.page);
       });
   };
 
+  // change view state on button click
   const viewLatest = () => {
     setstateOne(false);
     setstateTwo(true);
@@ -58,6 +60,7 @@ function LandingPage() {
     setstateThree(false);
   };
 
+  // Load More Button
   const loadMoreItems = () => {
     const endpoint = `${API_URL}movie/${view}?api_key=${API_KEY}&language=en-US&page=${
       CurrentPage + 1

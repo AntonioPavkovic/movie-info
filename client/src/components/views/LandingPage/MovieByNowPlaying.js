@@ -15,6 +15,7 @@ function MovieByNowPlaying() {
   const [MainMovieImage, setMainMovieImage] = useState(null);
   const [CurrentPage, setCurrentPage] = useState(0);
 
+  // Main Page's image
   useEffect(() => {
     const endpoint = `${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
     fetchMovies(endpoint);
@@ -25,6 +26,7 @@ function MovieByNowPlaying() {
       .then((result) => result.json())
       .then((result) => {
         console.log(result);
+        // Just add state
         setMovies([...Movies, ...result.results]);
         setMainMovieImage(result.results[0]);
         setCurrentPage(result.page);
