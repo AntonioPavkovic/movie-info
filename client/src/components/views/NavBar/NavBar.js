@@ -37,7 +37,7 @@ function NavBar() {
           type="primary"
           onClick={showDrawer}
         >
-          <Icon type="align-right" />
+        <Icon type="align-right" />
         </Button>
         <Drawer
           title="Basic Drawer"

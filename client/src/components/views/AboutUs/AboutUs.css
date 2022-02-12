@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+#ante{
+    margin: 2rem;
+}
+
+#niksa{
+    margin: 2rem;
+}
+
+.blog-post-bottom {
+    display: flex;
+    justify-content: center;
+}

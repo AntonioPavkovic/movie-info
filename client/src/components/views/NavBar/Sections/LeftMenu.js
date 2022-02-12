@@ -13,6 +13,11 @@ function LeftMenu(props) {
       <Menu.Item key="favorite">
         <a href="/favorite">Favorite</a>
       </Menu.Item>
+
+      <Menu.Item key = "aboutus">
+        <a href="aboutus">About us</a>
+      </Menu.Item>
+
     </Menu>
   );
 }
