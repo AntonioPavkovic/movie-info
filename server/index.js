@@ -17,9 +17,9 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use(require("./routes/users"));
-app.use(require("./routes/favorite"));
-app.use(require("./routes/comment"));
-app.use(require("./routes/like"));
+app.use("/api/favorite", require("./routes/favorite"));
+app.use("/api/favorite", require("./routes/comment"));
+app.use("/api/favorite", require("./routes/like"));
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
