@@ -16,10 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use(require("./routes/users"));
-app.use("/api/favorite", require("./routes/favorite"));
-app.use("/api/favorite", require("./routes/comment"));
-app.use("/api/favorite", require("./routes/like"));
+app.use("/users");
+app.use("/favorite");
+app.use("/comment");
+app.use("/like");
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
