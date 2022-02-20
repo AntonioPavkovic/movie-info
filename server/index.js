@@ -21,6 +21,13 @@ app.use(require("./routes/favorite"));
 app.use(require("./routes/comment"));
 app.use(require("./routes/like"));
 
+/*
+app.use("/api/users", require("./routes/users"));
+app.use("/api/favorite", require("./routes/favorite"));
+app.use("/api/comment", require("./routes/comment"));
+app.use("/api/like", require("./routes/like"));
+*/
+
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
