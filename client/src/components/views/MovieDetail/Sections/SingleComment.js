@@ -32,7 +32,7 @@ function SingleComment(props) {
     };
     console.log(variables.replyComment);
 
-    Axios.post("/api/comment/saveComment", variables).then((response) => {
+    Axios.post("/saveComment", variables).then((response) => {
       if (response.data.success) {
         // setCommentValue("");
         setOpenReply(!OpenReply);

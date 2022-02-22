@@ -16,7 +16,7 @@ function FavoritePage() {
 
   // Fetch F
   const fetchFavoritedMovie = () => {
-    Axios.post("/api/favorite/getFavoritedMovie", variable).then((response) => {
+    Axios.post("/getFavoritedMovie", variable).then((response) => {
       if (response.data.success) {
         console.log(response.data.favorites);
         setFavorites(response.data.favorites);
@@ -33,7 +33,7 @@ function FavoritePage() {
       userFrom: userFrom,
     };
 
-    Axios.post("/api/favorite/removeFromFavorite", variables).then(
+    Axios.post("/removeFromFavorite", variables).then(
       (response) => {
         if (response.data.success) {
           fetchFavoritedMovie();

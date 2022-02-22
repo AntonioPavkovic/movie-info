@@ -19,7 +19,7 @@ function LikeDislikes(props) {
   }
 
   useEffect(() => {
-    Axios.post("/api/like/getLikes", variable).then((response) => {
+    Axios.post("/getLikes", variable).then((response) => {
       console.log("getLikes", response.data);
 
       if (response.data.success) {
@@ -37,7 +37,7 @@ function LikeDislikes(props) {
       }
     });
 
-    Axios.post("/api/like/getDislikes", variable).then((response) => {
+    Axios.post("/getDislikes", variable).then((response) => {
       console.log("getDislike", response.data);
       if (response.data.success) {
         //How many likes does this video or comment have
@@ -61,7 +61,7 @@ function LikeDislikes(props) {
     }
 
     if (LikeAction === null) {
-      Axios.post("/api/like/upLike", variable).then((response) => {
+      Axios.post("/upLike", variable).then((response) => {
         if (response.data.success) {
           setLikes(Likes + 1);
           setLikeAction("liked");
@@ -77,7 +77,7 @@ function LikeDislikes(props) {
         }
       });
     } else {
-      Axios.post("/api/like/unLike", variable).then((response) => {
+      Axios.post("/unLike", variable).then((response) => {
         if (response.data.success) {
           setLikes(Likes - 1);
           setLikeAction(null);
@@ -94,7 +94,7 @@ function LikeDislikes(props) {
     }
 
     if (DislikeAction !== null) {
-      Axios.post("/api/like/unDisLike", variable).then((response) => {
+      Axios.post("/unDisLike", variable).then((response) => {
         if (response.data.success) {
           setDislikes(Dislikes - 1);
           setDislikeAction(null);
@@ -103,7 +103,7 @@ function LikeDislikes(props) {
         }
       });
     } else {
-      Axios.post("/api/like/upDisLike", variable).then((response) => {
+      Axios.post("/upDisLike", variable).then((response) => {
         if (response.data.success) {
           setDislikes(Dislikes + 1);
           setDislikeAction("disliked");

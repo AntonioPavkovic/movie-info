@@ -58,7 +58,7 @@ function MovieDetail(props) {
         setCasts(response.cast);
       });
 
-    Axios.post("/api/comment/getComments", movieVariable).then((response) => {
+    Axios.post("/getComments", movieVariable).then((response) => {
       console.log(response);
       if (response.data.success) {
         console.log("response.data.comments", response.data.comments);

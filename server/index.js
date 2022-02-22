@@ -16,38 +16,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-//user routes
-app.use("/auth");
-app.use("/register");
-app.use("/login");
-app.use("/logout");
 
-//comment routes
-app.use("/saveComment");
-app.use("/getComments");
-app.use("/deleteComment");
+app.use(require("./routes/users"));
+app.use(require("./routes/favorite"));
+app.use(require("./routes/comment"));
+app.use(require("./routes/like"));
 
-//favorited routes
-app.use("/favoriteNumber");
-app.use("/favorited");
-app.use("/removeFromFavorite");
-app.use("/addToFavorite");
-app.use("/getFavoritedMovie");
-
-//like routes
-app.use("/getLikes");
-app.use("/getDislikes");
-app.use("/upLike");
-app.use("/unLike");
-app.use("/unDisLike");
-app.use("/upDisLike")
-
-/*
-app.use("/users", require("./routes/users"));
-app.use("/favorite", require("./routes/favorite"));
-app.use("/comment", require("./routes/comment"));
-app.use("/like", require("./routes/like"));
-*/
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
