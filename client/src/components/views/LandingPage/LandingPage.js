@@ -60,13 +60,6 @@ function LandingPage() {
     setstateThree(false);
   };
 
-  // Load More Button
-  const loadMoreItems = () => {
-    const endpoint = `${API_URL}movie/${view}?api_key=${API_KEY}&language=en-US&page=${
-      CurrentPage + 1
-    }`;
-    fetchMovies(endpoint);
-  };
 
   return (
     <div style={{ width: "100%", margin: "0" }}>
@@ -106,9 +99,6 @@ function LandingPage() {
         )}
       </div>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button onClick={loadMoreItems}>Load More</Button>
-      </div>
     </div>
   );
 }
