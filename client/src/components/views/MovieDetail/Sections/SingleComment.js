@@ -56,7 +56,7 @@ function SingleComment(props) {
 
     if (variables.replyComment === 0) {
       if (checkwriter === variables.writer) {
-        Axios.post("/api/comment/deleteComment", variables).then((response) => {
+        Axios.post("/deleteComment", variables).then((response) => {
           props.refreshFunction(response.data.result);
         });
       } else {
@@ -79,11 +79,7 @@ function SingleComment(props) {
 
     <div>
       <Button onClick={onDelete}>Delete</Button>
-    </div>,
-
-    <div>
-      <Button>Edit</Button>
-    </div>,
+    </div>
   ];
 
   return (
