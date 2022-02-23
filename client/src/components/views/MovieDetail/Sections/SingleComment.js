@@ -84,6 +84,7 @@ function SingleComment(props) {
 
   return (
     <div>
+      
       <Comment
         actions={actions}
         author={props.comment.writer.name}
@@ -91,7 +92,7 @@ function SingleComment(props) {
         content={<p>{props.comment.content}</p>}
         replyComment={props.replyComment}
       ></Comment>
-
+      
       <br />
       {OpenReply && (
         <form style={{ display: "flex" }} onSubmit={onSubmit}>
@@ -107,6 +108,7 @@ function SingleComment(props) {
           </Button>
         </form>
       )}
+      
     </div>
   );
 }

@@ -28,7 +28,7 @@ function App() {
           <Route
             exact
             path="/movie/:movieId"
-            component={Auth(MovieDetail, null)}
+            component={Auth(MovieDetail, true)}
           />
           <Route exact path="/favorite" component={Auth(FavoritePage, true)} />
         </Switch>

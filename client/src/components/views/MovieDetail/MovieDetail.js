@@ -95,11 +95,11 @@ function MovieDetail(props) {
         </div>
       </div>
 
-      {/*  Movie Info */}
+      
       <MovieInfo movie={Movie} />
 
       <br />
-      {/* Actor Grid */}
+      
       <div
         style={{ display: "flex", justifyContent: "center", margin: "2rem" }}
       >
