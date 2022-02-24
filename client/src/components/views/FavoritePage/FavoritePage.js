@@ -3,11 +3,9 @@ import "./favorite.css";
 import Axios from "axios";
 import { Button, Typography, Popover } from "antd";
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from "../../Config";
-import { useSelector } from "react-redux";
 const { Title } = Typography;
 
 function FavoritePage() {
-  const user = useSelector(state => state.user);
   const [Favorites, setFavorites] = useState([]);
   const [Loading, setLoading] = useState(true);
   let variable = { userFrom: localStorage.getItem("userId") };
@@ -18,7 +16,7 @@ function FavoritePage() {
 
   // Fetch F
   const fetchFavoritedMovie = () => {
-    Axios.post("/getFavoritedMovie", variable).then((response) => {
+    Axios.post("/api/favorite/getFavoritedMovie", variable).then((response) => {
       if (response.data.success) {
         console.log(response.data.favorites);
         setFavorites(response.data.favorites);
@@ -35,7 +33,7 @@ function FavoritePage() {
       userFrom: userFrom,
     };
 
-    Axios.post("/removeFromFavorite", variables).then(
+    Axios.post("/api/favorite/removeFromFavorite", variables).then(
       (response) => {
         if (response.data.success) {
           fetchFavoritedMovie();
@@ -80,15 +78,7 @@ function FavoritePage() {
       <Title level={2}> My Favorite Movies</Title>
       <hr />
 
-      {user.userData && !user.userData.isAuth ?
-        <div style={{ width: '100%', fontSize: '2rem', height: '500px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <p>Please Log in first...</p>
-          <a href="/login">Go to Login page</a>
-        </div>
-          :
-          !Loading &&
-      
-        <table>
+      <table>
         <tbody>
           <tr>
             <th>{"Movie Title"}</th>
@@ -98,9 +88,7 @@ function FavoritePage() {
         </tbody>
 
         <tbody>{renderCards}</tbody>
-        </table>
-      }
-     
+      </table>
     </div>
   );
 }

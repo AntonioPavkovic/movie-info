@@ -29,7 +29,7 @@ function Favorite(props) {
 
     if (Favorited === true) {
       // Remove from favorite
-      Axios.post("/removeFromFavorite", variables).then(
+      Axios.post("/api/favorite/removeFromFavorite", variables).then(
         (response) => {
           if (response.data.success) {
             setFavoriteNumber(FavoriteNumber - 1);
@@ -41,7 +41,7 @@ function Favorite(props) {
       );
     } else if (Favorited === false) {
       // Add to favorite
-      Axios.post("/addToFavorite", variables).then((response) => {
+      Axios.post("/api/favorite/addToFavorite", variables).then((response) => {
         if (response.data.success) {
           setFavoriteNumber(FavoriteNumber + 1);
           setFavorited(true);
@@ -53,7 +53,7 @@ function Favorite(props) {
   };
 
   useEffect(() => {
-    Axios.post("/favoriteNumber", variables).then((response) => {
+    Axios.post("/api/favorite/favoriteNumber", variables).then((response) => {
       if (response.data.success) {
         setFavoriteNumber(response.data.favoriteNumber);
       } else {
@@ -61,7 +61,7 @@ function Favorite(props) {
       }
     });
 
-    Axios.post("/favorited", variables).then((response) => {
+    Axios.post("/api/favorite/favorited", variables).then((response) => {
       if (response.data.favorited === true) {
         setFavorited(true);
       } else if (response.data.favorited === false) {

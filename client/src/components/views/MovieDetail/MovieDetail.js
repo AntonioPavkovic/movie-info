@@ -58,7 +58,7 @@ function MovieDetail(props) {
         setCasts(response.cast);
       });
 
-    Axios.post("/getComments", movieVariable).then((response) => {
+    Axios.post("/api/comment/getComments", movieVariable).then((response) => {
       console.log(response);
       if (response.data.success) {
         console.log("response.data.comments", response.data.comments);
@@ -95,11 +95,11 @@ function MovieDetail(props) {
         </div>
       </div>
 
-      
+      {/*  Movie Info */}
       <MovieInfo movie={Movie} />
 
       <br />
-      
+      {/* Actor Grid */}
       <div
         style={{ display: "flex", justifyContent: "center", margin: "2rem" }}
       >
