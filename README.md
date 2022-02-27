@@ -1,5 +1,5 @@
 # Movie Review Web Application
-This is a movie reivew web app built using React, Node.js, MongoDB, TMDB API.
+This is a student project - movie reivew web app built using React, Node.js, MongoDB, TMDB API key.
 
 # Features
 1. Sign Up, Sign In, Logout, and User's authentication check using Redux.
